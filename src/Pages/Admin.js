@@ -7,7 +7,7 @@ function Admin() {
 	const deleteBooking = () => {
 		setDeleteModalOpen(false);
 
-		fetch("http://localhost:3000/admin/reset", {
+		fetch("https://raju-authenticating-be.onrender.com/admin/reset", {
 			method: "POST",
 			headers: {
 				"Content-Type": "application/json; charset=utf-8",

@@ -20,7 +20,7 @@ export default function Reservation() {
 	}, []);
 
 	const fetchTickets = async () => {
-		await fetch("http://localhost:3000")
+		await fetch("https://raju-authenticating-be.onrender.com")
 			.then((response) => response.json())
 			.then((data) => {
 				let [list, chunkSize] = [data, 20];
@@ -41,7 +41,7 @@ export default function Reservation() {
 			},
 		};
 
-		fetch("http://localhost:3000", {
+		fetch("https://raju-authenticating-be.onrender.com", {
 			method: "PUT",
 			headers: {
 				"Content-Type": "application/json; charset=utf-8",

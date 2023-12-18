@@ -16,7 +16,7 @@ function Table() {
 	}, []);
 
 	const fetchOpenTicket = async () => {
-		await fetch("http://localhost:3000/tickets/open")
+		await fetch("https://raju-authenticating-be.onrender.com/tickets/open")
 			.then((response) => response.json())
 			.then((data) => {
 				setTickets(data);
@@ -33,7 +33,7 @@ function Table() {
 			},
 		};
 
-		fetch("http://localhost:3000", {
+		fetch("https://raju-authenticating-be.onrender.com", {
 			method: "PUT",
 			headers: {
 				"Content-Type": "application/json; charset=utf-8",
@@ -62,7 +62,7 @@ function Table() {
 			id: ticketId,
 		};
 
-		fetch(`http://localhost:3000/ticket/delete`, {
+		fetch(`https://raju-authenticating-be.onrender.com/ticket/delete`, {
 			method: "PUT",
 			headers: {
 				"Content-Type": "application/json; charset=utf-8",
